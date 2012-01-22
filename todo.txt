@@ -1,0 +1,6 @@
+todo:
+
+SCM:
+
+also, the return value from namespace() should have 
+a function to add things to a namespace

@@ -1,0 +1,14 @@
+
+
+/*to get rid of fixed positioning for sound manager 2
+  fixed positioning slows down pages considerably*/
+/*
+.movieContainer {
+  position: absolute !important;
+  display: none !important;
+}
+*/
+
+#soundmanager-debug {
+  z-index: 100;
+}

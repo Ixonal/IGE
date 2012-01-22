@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <title>test...</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEArea.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGECharacter.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEConsole.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEImageHandler.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEMovableObject.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGENonPlayerCharacter.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEObject.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEPanel.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEPlayerCharacter.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGESector.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGESolidDirs.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGESoundHandler.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGESound.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEUserInterfaceButton.css"/>
+
+    <script type="text/javascript" src="lib/js/global/jquery-1.6.2.js"></script>
+    <script type="text/javascript" src="lib/js/global/soundmanager2.js"></script>
+
+
+    <script type="text/javascript" src="lib/SCM-min.js"></script>
+
+    <!--
+    <script type="text/javascript" src="lib/js/initial/SubClassManager.js"></script>
+    -->
+    <!--
+    <script type="text/javascript" src="lib/IGE-min.js"></script>
+    -->
+    
+    <script type="text/javascript" src="lib/IGE-complete.js"></script>
+    
+
+    <script type="text/javascript" src="lib/js/final/finalize.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        var levelViewer = new IGELevelViewer(),
+            testLevel = new IGELevel({
+              areas: [
+                new IGEObject({
+                  x: 25,
+                  y: 50,
+                  width: 1350,
+                  height: 25,
+                  solidDirs: true,
+                  friction: 1
+                }),
+                new IGEObject({
+                  x: 25,
+                  y: 50,
+                  width: 25,
+                  height: 500,
+                  solidDirs: true
+                })
+              ]
+            });
+
+
+        levelViewer.loadLevel(testLevel);
+
+        levelViewer.start();
+
+      });
+    </script>
+
+  </head>
+
+  <body>
+
+  </body>
+</html>

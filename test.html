@@ -1,0 +1,434 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <title>test...</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEArea.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGECharacter.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEConsole.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEImageHandler.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEMovableObject.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGENonPlayerCharacter.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEObject.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEPanel.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEPlayerCharacter.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGESector.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGESolidDirs.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGESoundHandler.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGESound.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/css/IGEUserInterfaceButton.css"/>
+
+    <!--<script type="text/javascript" src="lib/js/global/jquery-1.6.2.js"></script>-->
+    <script type="text/javascript" src="lib/js/global/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="lib/js/global/soundmanager2.js"></script>
+
+    <!--
+    <script type="text/javascript" src="lib/SCM-min.js"></script>
+    -->
+    
+    <script type="text/javascript" src="lib/js/initial/SubClassManager.js"></script>
+    
+    <!--
+    <script type="text/javascript" src="lib/IGE-min.js"></script>
+    -->
+    
+    <script type="text/javascript" src="lib/IGE-complete.js"></script>
+    
+
+    <!--
+    <script type="text/javascript" src="lib/js/global/globals.js"></script>
+    <script type="text/javascript" src="lib/js/initial/SubClassManager.js"></script>
+    <script type="text/javascript" src="lib/js/global/Observable.js"></script>
+    <script type="text/javascript" src="lib/js/global/Observer.js"></script>
+    <script type="text/javascript" src="lib/js/global/IGEException.js"></script>
+
+    <script type="text/javascript" src="lib/js/IGEInvalidIdException.js"></script>
+    <script type="text/javascript" src="lib/js/IGEInvalidTypeException.js"></script>
+    <script type="text/javascript" src="lib/js/IGEInvalidSourceException.js"></script>
+    <script type="text/javascript" src="lib/js/IGEPoint.js"></script>
+    <script type="text/javascript" src="lib/js/IGEVector.js"></script>
+    <script type="text/javascript" src="lib/js/IGEModifier.js"></script>
+    <script type="text/javascript" src="lib/js/IGERemovalException.js"></script>
+    <script type="text/javascript" src="lib/js/IGEStrata.js"></script>
+    <script type="text/javascript" src="lib/js/IGEArea.js"></script>
+    <script type="text/javascript" src="lib/js/IGEAreaModifier.js"></script>
+    <script type="text/javascript" src="lib/js/IGESound.js"></script>
+    <script type="text/javascript" src="lib/js/IGESoundException.js"></script>
+    <script type="text/javascript" src="lib/js/IGESoundHandler.js"></script>
+    <script type="text/javascript" src="lib/js/IGEImage.js"></script>
+    <script type="text/javascript" src="lib/js/IGEImageException.js"></script>
+    <script type="text/javascript" src="lib/js/IGESprite.js"></script>
+    <script type="text/javascript" src="lib/js/IGEAnimation.js"></script>
+    <script type="text/javascript" src="lib/js/IGEImageHandler.js"></script>
+    <script type="text/javascript" src="lib/js/IGELevel.js"></script>
+    <script type="text/javascript" src="lib/js/IGEUserInterfaceObject.js"></script>
+    <script type="text/javascript" src="lib/js/IGEUserInterfaceButton.js"></script>
+    <script type="text/javascript" src="lib/js/IGEUserInterfaceLabel.js"></script>
+    <script type="text/javascript" src="lib/js/IGEUserInterfacePanel.js"></script>
+    <script type="text/javascript" src="lib/js/IGEConsole.js"></script>
+    <script type="text/javascript" src="lib/js/IGESolidDirs.js"></script>
+    <script type="text/javascript" src="lib/js/IGEObject.js"></script>
+    <script type="text/javascript" src="lib/js/IGEObjectModifier.js"></script>
+    <script type="text/javascript" src="lib/js/IGEKeybind.js"></script>
+    <script type="text/javascript" src="lib/js/IGEKeybindHandler.js"></script>
+    <script type="text/javascript" src="lib/js/IGEPanel.js"></script>
+    <script type="text/javascript" src="lib/js/IGEMovableObject.js"></script>
+    <script type="text/javascript" src="lib/js/IGEMovableObjectModifier.js"></script>
+    <script type="text/javascript" src="lib/js/IGETargeter.js"></script>
+    <script type="text/javascript" src="lib/js/IGECharacter.js"></script>
+    <script type="text/javascript" src="lib/js/IGECharacterModifier.js"></script>
+    <script type="text/javascript" src="lib/js/IGEBuff.js"></script>
+    <script type="text/javascript" src="lib/js/IGEDebuff.js"></script>
+    <script type="text/javascript" src="lib/js/IGEPlayerCharacter.js"></script>
+    <script type="text/javascript" src="lib/js/IGENonPlayerCharacter.js"></script>
+    <script type="text/javascript" src="lib/js/IGEMovingPlatform.js"></script>
+    <script type="text/javascript" src="lib/js/IGECircuitPlatform.js"></script>
+    <script type="text/javascript" src="lib/js/IGERotationalPlatform.js"></script>
+    <script type="text/javascript" src="lib/js/IGESector.js"></script>
+    <script type="text/javascript" src="lib/js/IGETimedSector.js"></script>
+    -->
+
+    <script type="text/javascript" src="test/FPSPanel.js"></script>
+    <script type="text/javascript" src="test/SpeedBuff.js"></script>
+    
+
+    <script type="text/javascript" src="lib/js/final/finalize.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+
+/*
+        using("IGE");
+        using("IGE.Control");
+        using("IGE.Audio");
+        using("IGE.Graphics");
+        using("IGE.UI");
+    */
+
+   with(namespace("IGE",
+                  "IGE.Control",
+                  "IGE.Audio",
+                  "IGE.Graphics",
+                  "IGE.UI")) {
+
+        console.log(window);
+
+        var test = new IGEPanel({
+              framesPerSecond: 36,
+              console: {x: 0, y: 0, width: 800, height: 100},
+              verbose: false
+            }),
+            testBinds = test.getKeybindHandler(),
+            framesPerSecond = new FPSPanel(),
+            pauseButton = $("input#pause"),
+            test1 = new IGEObject({
+              x: 25,
+              y: 50,
+              width: 1350,
+              height: 25,
+              solidDirs: true,
+              friction: 1
+            }),
+            test2 = new IGEPlayerCharacter({
+              x: 200,
+              y: 300,
+              width: 35,
+              height: 90,
+              solidDirs: true,
+              gravity: {
+                horizontal: 0,
+                vertical: 1
+              },
+              accelleration: {
+                horizontal: 2.5,
+                vertical: 1
+              },
+              maxSpeed: {
+                horizontal: 15,
+                vertical: 75
+              },
+              id: "Miku",
+              verbose: false
+            }),
+            leftWall = new IGEObject({
+              x: 25,
+              y: 50,
+              width: 25,
+              height: 500,
+              solidDirs: true
+            }),
+            rightWall = new IGEObject({
+              x: 1350,
+              y: 50,
+              width: 25,
+              height: 500,
+              solidDirs: true
+            }),
+            topWall = new IGEObject({
+              x: 25,
+              y: 525,
+              width: 1350,
+              height: 25,
+              solidDirs: true
+            }),
+            testBind = new IGEKeybind({
+              keycode: 32,
+              keydown: function() {
+                test2.getSoundHandler().play("jump");
+                test2.stableHorizontal = null;
+                test2.stableVertical = null;
+                test2.movement.addY(20);
+              },
+              description: "test..."
+            }),
+            leftBind = new IGEKeybind({
+              keycode: testBinds.getKeyToKeycode("a"),
+              keydown: function() {
+                test2.movingLeft = true;
+              },
+              keyup: function() {
+                test2.movingLeft = false;
+              },
+              description: "left movement"
+            }),
+            rightBind = new IGEKeybind({
+              keycode: testBinds.getKeyToKeycode("d"),
+              keydown: function() {
+                test2.movingRight = true;
+              },
+              keyup: function() {
+                test2.movingRight = false;
+              },
+              description: "right movement"
+            }),
+            testImage = new IGEImage({
+              x: -30,
+              y: 0,
+              width: 110,
+              height: 90,
+              source: "img/hachunene2_small_right.png",
+              id: "test image 1",
+              hide: true
+            }),
+            testImage2 = new IGEImage({
+              x: -53,
+              y: 0,
+              width: 110,
+              height: 90,
+              source: "img/hachunene2_small.png",
+              id: "test image 2",
+              hide: false
+            }),
+            testLevel = new IGELevel({
+              areas: [
+                test1,
+                test2,
+                leftWall,
+                rightWall,
+                topWall
+              ],
+              friction: {
+                horizontal: .5,
+                vertical: 0
+              }
+            }),
+            testSound = new IGESound({
+              id: "jump",
+              source: "snd/mario_jump.mp3"
+            }),
+            spriteTest = new IGESprite({
+              x: 0,
+              y: 100,
+              width: 35,
+              height: 35,
+              spriteTop: 25,
+              spriteLeft: 50,
+              source: "img/hachunene2_small.png",
+              id: "test sprite"
+            }),
+            animationTest = new IGEAnimation({
+              interval: 200,
+              images: [
+                testImage,
+                testImage2
+              ],
+              repeat: 5
+            }),
+            testPlatform = new IGEObject({
+              x: 300,
+              y: 200,
+              width: 300,
+              height: 25,
+              solidDirs: true,
+              friction: 1
+            }),
+            buffTest = new SpeedBuff(),
+            testSector = new IGESector({
+              x: 400,
+              y: 0,
+              width: 400,
+              height: 400,
+              enter: function() {
+                //console.log("entering test sector");
+              },
+              leave: function() {
+                //console.log("leaving test sector");
+              }
+            }),
+            testButton = new IGEUserInterfaceButton({
+              x: 645,
+              y: 5,
+              width: 150,
+              height: 25,
+              text: "click me",
+              click: function() {
+                testButton.displayInfo("test button has been clicked.");
+              }
+            });
+
+        test.add(framesPerSecond);
+
+        testPlatform.getImageHandler().setBackgroundImage("img/platform_01.png");
+        testLevel.add(testPlatform);
+
+        testSector.getImageHandler().setBackgroundColor("#0044FF");
+        testLevel.add(testSector);
+
+        test.add(testButton);
+
+        test.loadLevel(testLevel);
+
+        test.setFocusObject(test2);
+
+        testLevel.getImageHandler().setBackgroundColor("#79F");
+
+        //test.add(test1);
+        //test.add(test2);
+        //test.add(leftWall);
+        //test.add(rightWall);
+        //test.add(topWall);
+
+        testBinds.bind(testBind);
+        testBinds.bind(leftBind);
+        testBinds.bind(rightBind);
+
+        test1.getImageHandler().setBackgroundImage("img/platform_01.png");
+
+        test2.getImageHandler().addImage(testImage).addImage(testImage2);
+
+        test2.getImageHandler().addAnimation(animationTest);
+
+        test2.addModifier(buffTest);
+
+        //test2.getImageHandler().addImage(spriteTest);
+
+        test2.getSoundHandler().addSound(testSound);
+
+        test.start();
+
+        pauseButton.click(function() {
+          test.pauseToggle();
+        });
+
+        $("#testButton").click(function() {
+          //console.log(test2.getAccelleration().getX());
+
+          //test2.removeModifier("SpeedBuff");
+
+          //console.log(test2.getAccelleration().getX());
+          //console.log(test2.stableVertical);
+        });
+
+
+        //console.log(test.getKeybindHandler().panel);
+
+        //animationTest.start();
+
+
+        //console.log(test1.friction);
+
+        /*
+        var stoof = $("#stoof");
+        var field;
+        stoof.append("soundManager functions:\n");
+        for(var key in soundManager) {
+          field = soundManager[key];
+          if(typeof(field) === "function") stoof.append(key + "\n");
+        }
+        stoof.append("\n\n\nsoundManager fields:\n");
+        for(var key in soundManager) {
+          field = soundManager[key];
+          if(typeof(field) === "object") stoof.append(key + ":\n");
+          for(var otherKey in field) {
+            if(typeof(field[otherKey]) === "function") stoof.append("  function: " + otherKey + "\n");
+            else                                       stoof.append("  field: " + otherKey + "\n");
+          }
+        }
+        */
+/*
+      var blah = COM.ClassObject.overloadWithTypes(
+        [IGEPanel, IGECharacter],
+        function() { console.log("blah 1"); },
+
+        [IGEPlayerCharacter],
+        function() { console.log("blah 2"); },
+
+        [IGEKeybind],
+        function() { console.log("blah 3"); }
+      );
+*/
+      //console.log(blah.overloadTypes);
+
+      //blah(test, test2);
+
+      //blah(test2);
+
+      //blah(leftBind);
+
+       //console.log(ClassObject.obtainNamespace("IGE.Exceptions.*"));
+
+      var blah = overload(
+        [Number, Boolean],
+        function() { console.log("Got a number and boolean"); },
+
+        [Number, Array],
+        function() { console.log("Got a number and array"); },
+
+        [IGEArea, Object],
+        function() { console.log("Got an IGEArea and an object"); },
+
+        [],
+        function() { console.log("got nothing"); }
+      );
+
+      blah(1, true);
+      blah(1, []);
+      blah(test, {});
+      blah()
+
+
+   }
+      });
+/*
+      Array.prototype.getClassName = function() { return "Array"; }
+
+      var blahArray = [];
+
+      console.log(blahArray);
+      console.log(blahArray.getClassName());
+      
+*/
+
+    </script>
+    
+  </head>
+  <body>
+
+    <input type="button" value="pause" id="pause"/>
+    <input type="button" value="test" id="testButton"/>
+
+    <!--<textarea rows="15" cols="100" style="z-index: 150" id="stoof"></textarea>-->
+
+  </body>
+</html>

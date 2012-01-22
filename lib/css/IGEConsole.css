@@ -1,0 +1,35 @@
+
+.IGEConsole {
+  background: #000000;
+}
+
+.IGEConsole .message {
+  font-size: 9pt;
+  font-family: Verdana;
+  color: #ffffff;
+}
+
+.IGEConsole .message span {
+  font-weight: bold;
+}
+
+.IGEConsole .message .info {
+  color: #FFFFFF;
+}
+
+.IGEConsole .message .warning {
+  color: #FFFF11;
+}
+
+.IGEConsole .message.warning {
+  
+}
+
+.IGEConsole .message .error {
+  color: #FF2222;
+}
+
+.IGEConsole .message.error {
+  color: #FF2222;
+  font-style: italic;
+}
